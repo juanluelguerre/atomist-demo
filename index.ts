@@ -20,15 +20,20 @@ import { HelloWorldGoalConfigurer } from "./lib/goals/goalConfigurer";
 import { HelloWorldGoalCreator } from "./lib/goals/goalCreator";
 import { HelloWorldGoals } from "./lib/goals/goals";
 
+
+console.log('###############################');
 /**
  * The main entry point into the SDM
  */
 export const configuration = configure<HelloWorldGoals>(async sdm => {
 
+
+    console.log('222222222222222222222');
+
     // Use the sdm instance to configure commands etc
     sdm.addCommand({
         name: "HelloWorld",
-        description: "Command that responds with a 'hello world'",
+        description: "Command that responds with a 'hello world'",        
         listener: async ci => {
             await ci.addressChannels("Hello World");
         },
